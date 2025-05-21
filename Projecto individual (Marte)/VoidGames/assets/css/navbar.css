@@ -1,64 +1,414 @@
-:root{
-    --navbar-background--:#b50000;
-    --a-background--:#e90000;
-    --body-background--:#090909;
-    --text-color--:#f1f1f1;
-  }
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
-  }
-  body {
     font-family: "Montserrat", sans-serif;
-    background: var(--body-background--);
   }
-nav {
-    background: var(--navbar-background--);
-    height: 80px;
-    width: 100%;
+:root{
+    --navbar-color--:#b50000;
+    --a-background--:#e90000;
+    --body-color----:#090909;
+    --text-color----:#f1f1f1;
   }
-  label.logo{
-    color: var(--text-color--);
-    font-size: 25px;
-    line-height: 80px;
-    padding: 0 50px;
-    font-weight: bold;
-  }
-  nav ul {
-    float: right;
-    margin-right: 20px;
-  }
-  nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  nav ul li a {
-    color: var(--text-color--);
-    font-size: 17px;
-    text-transform: uppercase;
-    transition: 0.5s;
-  }
-  nav ul li a.active,
-  nav ul li a:hover {
-    background: var(--a-background--);
-    transition: 0.5s;
-    padding: 7px 13px;
-    border-radius: 3px;
-    color: var(--text-color--);
-  }
-  p{
-    font-size: large;
-    text-align: center;
-    color: var(--text-color--);
-    font-weight: bold;
-    justify-content: center;
-    display: block;
+  body.dark{
+    --body-color----:#212529;
+    --navbar-color--:#495057;
+    --side-nav:#383a3c;
+    --text-color----:#F8F9FA;
+    --search-bar:#262627;
+    --search-text:#F8F9FA;
+    transition: all 0.7s linear;
 }
-img{
-    display: block;
-    margin: 50px auto;
+body{
+    height: 100vh;
+    background-color: var(--body-color----);
+    transition: all 0.7s linear;
+}
+header{
+    border: #004f7a 2px solid;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--navbar-color--);
+    transition: all 0.7s linear;
+    z-index: 100;
+}
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .nav-bar .sideO{
+    color: var(--text-color----);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+nav .nav-bar .logo{
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 100;
+    color: var(--text-color----);
+}
+nav .nav-bar .navlogo{
+    opacity: 1;
+    transition: all 0.7s linear;
+}
+.menu .logoToggle{
+    display: none;
+    
+}
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-bar .nav-links li{
+    list-style: none;
+    margin: 0 8px;
+}
+.nav-links li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--text-color----);
+    font-weight: 90;
+    padding: 10px;
+    transition: all 0.7s ease;
+}
+.nav-links li a:hover{
+    background-color: var(--a-background--);
+    transition: 1s;
+    border-radius: 7px;
+}
+.nav-links li a.active{
+    background-color: var(--a-background--);
+}
+.nav-bar .dark-mode-box{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+}
+.dark-mode-box .dark-mode,
+.dark-mode-box .accountToggle{
+    height: 15px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+}
+.dark-mode i,
+.accountToggle i{
+    position: absolute;
+    color: var(--text-color----);
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.7s linear;
+}
+.dark-mode i.sun,
+.accountToggle i.cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+.dark-mode.active i.sun,
+.accountToggle.active i.cancel{
+    opacity: 1;
+    pointer-events: auto;
+}
+.dark-mode.active i.moon,
+.accountToggle.active i.user{
+    opacity: 0;
+    pointer-events: none;
+}
+.search-mode{
+    position: relative;
+}
+section{
+    height: 100%;
+    max-height: 1000px;
+    width: 100%;
+    justify-content: center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    background-image: var(--section-image);
+    transition: all 0.7s linear;
+    margin: -18px;
+    margin-left: 0px;
+}
+section h1{
+    color: var(--text-color--);
+    filter: drop-shadow(2px 2px 5px #495057);
+    padding: 10px;
+    font-size: 44px;
+    margin-left: -100px;
+    transition: all 0.7s linear;
+    animation: nogin 3s;
+}
+section h2{
+    color: var(--text-color--);
+    filter: drop-shadow(2px 2px 5px #495057);
+    padding: 10px;
+    font-size: 40px;
+    margin-left: -100px;
+    transition: all 0.7s linear;
+    animation: nogin 3s;
+}
+section h3{
+    color: var(--text-color--);
+    filter: drop-shadow(2px 2px 5px #495057);
+    padding: 10px;
+    font-size: 38px;
+    margin-left: -100px;
+    transition: all 0.7s linear;
+    animation: nogin 3s;
+}
+.btn{
+    padding: 10px 70px;
+    margin-left: 300px;
+    margin-top: -50px;
+    position: absolute;
+    background-color: transparent;
+    border: 1.5px solid var(--body-color--);
+    color: var(--text-color--);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.7s linear;
+    animation: nogin 3s;
+}
+.btn:hover{
+    background-color: var(--navbar-color--);
+    transition: all 0.7s linear;
+    filter: drop-shadow(2px 2px 5px var(--navbar-color--));
+}
+section.active  h1 ~ h2,
+section.active  h1 ~ h3,
+section.active  h1,
+section.active  .btn{
+    display: none;
+    transition: all 0.7s linear;
+}
+section h2#log{
+    color: var(--text-color--);
+    filter: drop-shadow(2px 2px 5px #495057);
+    padding: 10px;
+    font-size: 44px;
+    text-align: center;
+}
+section .box,section .box1{
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(2px 2px 5px #495057);
+    border: var(--navbar-color--) 1.5px solid;
+    width: 450px;
+    height: 550px;
+    padding: 50px;
+    transition: all 0.7s ease-out;
+    border-radius: 25px;
+    display: none;
+    pointer-events: none;
+    animation: nlogin 0.5s;
+}
+.box1.show{
+    display: flex;
+    pointer-events: auto;
+    transition: all 0.7s ease-out;
+    animation: nogin 1s;
+    position: absolute;
+}
+.box.show{
+    display: flex;
+    pointer-events: auto;
+    transition: all 0.7s ease-out;
+    animation: nogin 1s;
+    position: absolute;
+}
+@keyframes nlogin {
+    from{
+        display: flex;
+        opacity: 1;
+    }
+    to{
+        display: none;
+        opacity: 0;
+    }
+}
+@keyframes nogin {
+    from{
+       opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.box-mail{
+    margin-top: 15%;
+}
+
+.box-mail,
+.box-pass{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    margin-left: -30px;
+    margin-bottom: 25px;
+    border: none;
+    align-items: center;
+    padding: 3px;
+    transition: all 0.7s linear;
+}
+section input{
+    height: 100%;
+    border: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px 0 15px;
+    outline: none;
+    margin-left: 10%;
+    border-radius: 2px 20px 20px 2px;
+    font-size: 16px;
+    color: var(--search-text);
+    transition: all 0.7s linear;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    font-size:21px;
+    transition: all 0.7s linear;
+}
+input:is(:focus, :valid){
+    border: 2.5px solid var(--navbar-color--);
+    transition: all 0.7s linear;
+}
+input:is(:focus, :valid)::placeholder{
+    color: var(--navbar-color--);
+    font-size: 20px;;
+    transition: all 0.7s linear;
+}
+section i.icon{
+    position: absolute;
+    left: 5px;
+    margin-left: 4%;
+    font-size: 30px;
+    color: var(--text-color--);
+    filter: drop-shadow(2px 2px 5px var(--navbar-color--));
+    transition: all 0.7s linear;
+}
+section i.eye{
+    left: 80%;
+    color: var(--navbar-color--);
+    font-size: 25px;
+    filter: drop-shadow(2px 2px 5px var(--body-color--));
+    cursor: pointer;
+}
+.loginbtn{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 35px;
+    width: 100%;
+    background-color: transparent;
+    border: 1.5px var(--text-color--) solid;
+    border-radius: 20px;
+    padding: 5px;
+    color: var(--text-color--);
+    filter: drop-shadow(2px 2px 5px #0077B6);
+    transition: all 0.7s linear;
+}
+.loginbtn:hover{
+    font-size: 35px;
+    background-color: var(--navbar-color--);
+    padding: 5px;
+    font-weight: 600;
+    color: var(--text-color--);
+    filter: drop-shadow(2px 2px 5px #EFFCFF);
+}
+p{
+    font-size: 20px;
+    color: var(--text-color--);
+    display: flex;
+    justify-content:center ;
+    margin-top: 50px;
+}
+a{
+    font-size: 20px;
+    color: #00ff3c;
+    margin-left: 7px;
+    text-decoration: none;
+    transition: all 0.7s linear;
+    
+}
+a:hover{
+    transform: scale(110%);
+    font-weight: 700;
+}
+@media (max-width: 790px) {
+    nav .nav-bar .sideO{
+        display: block;
+    }
+    nav.active .nav-bar .sideO{
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.7s linear;
+        
+    }
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 400px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        /*background-color: var(--side-nav);*/
+        z-index: 100;
+        transition: all 1.7s linear;
+        border: 1.5px solid #F8F9FA;
+        
+        border-radius: 10px 30px 10px 10px;
+    }
+    nav.active .menu{
+        left: -0%;
+    }
+    nav.active .nav-bar .navlogo{
+        pointer-events: none;
+        opacity: 0;
+    }
+    nav .nav-bar .navlogo{
+        opacity: 1;
+    }
+    .menu .logoToggle{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logoToggle .side{
+        color: var(--text-color--);
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
 }
