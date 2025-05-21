@@ -14,6 +14,7 @@
   body.dark{
     --body-color----:#212529;
     --navbar-color--:#495057;
+    --a-background--:#313539;
     --side-nav:#383a3c;
     --text-color--:#F8F9FA;
     --search-bar:#262627;
@@ -148,6 +149,10 @@ section{
     transition: all 0.7s linear;
     margin: -18px;
     margin-left: 0px;
+}
+section p{
+    margin-top: 50px;
+    display: block;
 }
 section h1{
     color: var(--text-color--);

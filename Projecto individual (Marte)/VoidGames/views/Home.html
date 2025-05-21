@@ -57,30 +57,30 @@
         <div class="title">
             <h1>Problemas na hora de iniciar uma sessão de jogatina</h1>
             <h2>A VoidGames está aqui para resolver esse dilema.</h2>
-            <h3>Venha saber mais</h3><button class="btn"><a href="http://127.0.0.1:5500/HTML/Explore.html">Explore</a></button>
+            <h3>Venha saber mais</h3><button class="btn"><a href="./About.html">Explore</a></button>
         </div>
         <div class="box">
-            <form action="#" class="log">
+            <form id="log" action="./Menu.html" class="log" method="post">
                 <h2 id="log">Login</h2>
                 <div class="box-mail">
                 <i class='bx bx-envelope icon' ></i>
-                <input type="email" placeholder="Enter your email" required>  
+                <input type="text" name="nome" placeholder="Enter your name" required>  
                 </div>
                 <div class="box-pass">
                 <i class='bx bx-lock-alt icon' ></i>
-                <input type="password" placeholder="Enter your password" required class="inputt">
+                <input type="password" name="pass" placeholder="Enter your password" required class="inputt">
                 <i class="fa-regular fa-eye-slash eye icon"></i>
                 </div>
-                <button class="loginbtn"><a href="http://127.0.0.1:5500/HTML/Explore.html">Login</a></button>
+                <button type="submit" class="loginbtn"><a href="./Menu.html">Login</a></button>
                 <p>Ainda não possui uma conta <a href="#" class="siginn">Crie uma</a></p>
             </form>
         </div>
         <div class="box1">
-            <form action="#" class="singin">
+            <form id="sig" action="#" class="singin">
                 <h2 id="log">Singup</h2>
                 <div class="box-mail">
                 <i class='bx bx-envelope icon' ></i>
-                <input type="email" placeholder="Enter your email" required>  
+                <input type="text" placeholder="Enter your name" required>  
                 </div>
                 <div class="box-pass">
                 <i class='bx bx-lock-alt icon' ></i>
@@ -90,11 +90,44 @@
                     <i class='bx bx-lock-alt icon' ></i>
                     <input type="password" placeholder="Confirm your password" required>
                     </div>
-                <button class="loginbtn"><a href="http://127.0.0.1:5500/HTML/Explore.html">Signup</a></button>
+                <button type="submit" class="loginbtn"><a href="./Menu.html">Signup</a></button>
                 <p>Já possui uma conta <a href="#" class="loginn">Entre</a></p>
             </form>
         </div>
     </section>
 </body>
 <script src="../assets/js/navbar.js"></script>
+<script>
+    // Cadastro
+    document.getElementById("sig").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+
+      const res = await fetch("/api/rotas/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+      document.getElementById("result").innerText = json.message;
+    });
+
+    // Login
+    document.getElementById("log").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+
+      const res = await fetch("/api/rotas/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+      document.getElementById("result").innerText = json.message || json.error;
+    });
+  </script>
 </html>
