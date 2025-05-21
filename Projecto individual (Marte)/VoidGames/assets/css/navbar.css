@@ -9,13 +9,13 @@
     --navbar-color--:#b50000;
     --a-background--:#e90000;
     --body-color----:#090909;
-    --text-color----:#f1f1f1;
+    --text-color--:#f1f1f1;
   }
   body.dark{
     --body-color----:#212529;
     --navbar-color--:#495057;
     --side-nav:#383a3c;
-    --text-color----:#F8F9FA;
+    --text-color--:#F8F9FA;
     --search-bar:#262627;
     --search-text:#F8F9FA;
     transition: all 0.7s linear;
@@ -50,7 +50,7 @@ nav .nav-bar{
     justify-content: space-between;
 }
 nav .nav-bar .sideO{
-    color: var(--text-color----);
+    color: var(--text-color--);
     font-size: 25px;
     padding: 5px;
     cursor: pointer;
@@ -60,7 +60,7 @@ nav .nav-bar .logo{
     font-size: 30px;
     text-decoration: none;
     font-weight: 100;
-    color: var(--text-color----);
+    color: var(--text-color--);
 }
 nav .nav-bar .navlogo{
     opacity: 1;
@@ -82,7 +82,7 @@ nav .nav-bar .navlogo{
     position: relative;
     text-decoration: none;
     font-size: 18px;
-    color: var(--text-color----);
+    color: var(--text-color--);
     font-weight: 90;
     padding: 10px;
     transition: all 0.7s ease;
@@ -113,7 +113,7 @@ nav .nav-bar .navlogo{
 .dark-mode i,
 .accountToggle i{
     position: absolute;
-    color: var(--text-color----);
+    color: var(--text-color--);
     font-size: 25px;
     cursor: pointer;
     transition: all 0.7s linear;
@@ -306,14 +306,12 @@ section i.icon{
     margin-left: 4%;
     font-size: 30px;
     color: var(--text-color--);
-    filter: drop-shadow(2px 2px 5px var(--navbar-color--));
     transition: all 0.7s linear;
 }
 section i.eye{
     left: 80%;
     color: var(--navbar-color--);
     font-size: 25px;
-    filter: drop-shadow(2px 2px 5px var(--body-color--));
     cursor: pointer;
 }
 .loginbtn{
@@ -327,7 +325,6 @@ section i.eye{
     border-radius: 20px;
     padding: 5px;
     color: var(--text-color--);
-    filter: drop-shadow(2px 2px 5px #0077B6);
     transition: all 0.7s linear;
 }
 .loginbtn:hover{
@@ -336,7 +333,6 @@ section i.eye{
     padding: 5px;
     font-weight: 600;
     color: var(--text-color--);
-    filter: drop-shadow(2px 2px 5px #EFFCFF);
 }
 p{
     font-size: 20px;
@@ -347,11 +343,11 @@ p{
 }
 a{
     font-size: 20px;
-    color: #00ff3c;
+    color: var(--text-color--);
     margin-left: 7px;
     text-decoration: none;
     transition: all 0.7s linear;
-    
+    margin-bottom: 3px;
 }
 a:hover{
     transform: scale(110%);

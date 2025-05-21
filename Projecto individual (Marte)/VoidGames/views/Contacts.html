@@ -4,25 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
     <link rel="stylesheet" href="../assets/css/navbar.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Void.home</title>
 </head>
 
 <body>
-    <nav>
-        <h3>
-            <label class="logo">VoidGames</label>
-            <ul>
-                <li><a href="Home.html" >Home</a></li>
-                <li><a href="About.html" >About</a></li>
-                <li><a href="Contacts.html" class="active">Contacts</a></li>
-                <li><a href="Log_in.html">Log in</a></li>
-                <li><a href="Sing_in.html">Sign in</a></li>
-                <li><a href="My_games.html">My Games</a></li>
-                <li><a href="Wishlist.html">Whishlist</a></li>
-            </ul>
-        </h3>
+     <nav>
+        <div class="nav-bar">
+            <i class="fa-solid fa-bars sideO"></i>
+            <span class="logo navlogo">VOIDGAMES</span>
+            <div class="menu">
+                <div class="logoToggle">
+                    <i class="fa-solid fa-x side"></i>
+                    <span class="logo">VOIDGAMES</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="./Home.html" >Home</a></li>
+                    <li><a href="./About.html">About</a></li>
+                    <li><a href="./Contacts.html" class="active">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="dark-mode-box">
+                <div class="dark-mode">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            
+                <div class="search-mode">
+                    <div class="accountToggle">
+                    <i class="fa-solid fa-x cancel"></i>
+                    <i class='bx bx-user user' ></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
     
     <main>
