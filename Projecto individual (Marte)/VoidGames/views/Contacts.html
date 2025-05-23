@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
     <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/cards.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <!--Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,12 +46,68 @@
         </div>
     </nav>
     
-    <main>
-        <br><br>
-        <p>Quer dar algum feedback? Contacte o Desenvolvedor</p>
-        <p>Telefone: 922921925</p>
-        <p>E-mail: crismelio.dos.prazeres12@gmail.com</p>
-    </main>
+    <section>
+        <div class="title">
+            <div class="container"><br><br>
+                <div class="main-card">
+                    <div class="cards">
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="../assets/img/controller_04.jpg">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Marte</div>
+                                    <div class="job">FullStack</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <form action="#" class="log">
+                <h2 id="log">Login</h2>
+                <div class="box-mail">
+                <i class='bx bx-envelope icon' ></i>
+                <input type="email" placeholder="Enter your email" required>  
+                </div>
+                <div class="box-pass">
+                <i class='bx bx-lock-alt icon' ></i>
+                <input type="password" placeholder="Enter your password" required class="inputt">
+                <i class="fa-regular fa-eye-slash eye icon"></i>
+                </div>
+                <button class="loginbtn">Login</button>
+                <p>Ainda não possui uma conta <a href="#" class="siginn">Crie uma</a></p>
+            </form>
+        </div>
+        <div class="box1">
+            <form action="#" class="singin">
+                <h2 id="log">Singup</h2>
+                <div class="box-mail">
+                <i class='bx bx-envelope icon' ></i>
+                <input type="email" placeholder="Enter your email" required>  
+                </div>
+                <div class="box-pass">
+                <i class='bx bx-lock-alt icon' ></i>
+                <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="box-pass">
+                    <i class='bx bx-lock-alt icon' ></i>
+                    <input type="password" placeholder="Confirm your password" required>
+                    </div>
+                <button class="loginbtn">Signup</button>
+                <p>Já possui uma conta <a href="#" class="loginn">Entre</a></p>
+            </form>
+        </div>
+    </section>
     <br><br><br>
     <footer><p>Desenvolvedor --Marte--</p></footer>
 </body>
