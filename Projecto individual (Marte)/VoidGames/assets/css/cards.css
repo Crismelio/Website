@@ -89,8 +89,9 @@ section.active .container{
 }
 .card .content .details .job{
     font-size: 30px;
-    font-weight: 99;
-    color: var(--a-background--);
+    font-weight: bolder;
+    color: var(--navbar-color--);
+    text-shadow: var(--text-color--) 1px 1px;
 }
 .card .content .media-icons{
     display: flex;
