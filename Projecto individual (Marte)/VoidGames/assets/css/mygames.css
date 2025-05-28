@@ -45,7 +45,6 @@ section.active  .container{
 .main-card .cards .card{
     display: flex;
     width: calc(100% / 3 - 10px);
-    backdrop-filter: blur(10px);
     border: 2px solid var(--text-color--);
     padding: 50px;
     flex-direction: column;
